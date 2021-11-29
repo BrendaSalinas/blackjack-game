@@ -5,15 +5,23 @@
 //Create a variable, sum and set it to the sum of the two cards. 
 
 let firstCard = 10;
-let secondCard = 11; 
-
+let secondCard = 1; 
 let sum = firstCard + secondCard;
 
+let hasBlackJack = false;
+let isAlive = true;
+
+let message = "";
+
 if (sum <= 20) {
-    console.log("do you want to draw a new card?")
+    message = "do you want to draw a new card?";
+    
 }else if (sum === 21) {
-    console.log("You've got a blackjack");
+    message = "You've got a blackjack!";
+    hasBlackjack = true;
 }else {
-    console.log("You're out of the game! "); 
+    message = "You're out of the game! "; 
+    isAlive = false;
 };
 
+console.log(message);
